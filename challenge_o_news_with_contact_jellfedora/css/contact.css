@@ -147,7 +147,34 @@ section {
   border-left: none;
   border-right: none;
   width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
 }
+
+#checkbox{
+  margin-top: 20px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 20px;
+}
+
+#fichier{
+    margin-top: 20px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+}
+
+#upload{
+  margin-top: 20px;
+}
+
+#upload_button{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #4cced3;
+  border-radius: 7px;
+}
+
 
 
 
