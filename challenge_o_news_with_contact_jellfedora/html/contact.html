@@ -36,28 +36,29 @@
 
 			<section>
 
+				<!-- Formulaire -->
 				<form action="traitement.php" method="POST">
 
+					<!-- Zone de Renseignements utilisateurs -->
+					<div id="renseignement">
+						<fieldset>
 
-					<fieldset>
+							<!-- Choix Mme/Mr -->
+							<input type="radio" name="statut" id="button_mme"> <label for="radio">Mme</label> /
+							<input type="radio" name="statut" id="button_mr"> <label for="radio">Mr</label>
 
-						<!-- Choix Mme/Mr -->
-						<input type="radio" name="case" id="button_mme"> <label for="radio">Mme /</label>
-						<input type="radio" name="case" id="button_mr"> <label for="radio">Mr</label>
+							<!-- Prenom -->
+							<input type="text" placeholder="Prenom">
 
-						<!-- Prenom -->
-						<input type="text" placeholder="Prenom">
+							<!-- Nom -->
+							<input type="text" placeholder="Nom">
 
-						<!-- Nom -->
-						<input type="text" placeholder="Nom">
+							<!-- E-mail -->
+							<input type="email" placeholder="Adresse e-mail">
 
-						<!-- E-mail -->
-						<input type="email" placeholder="Adresse e-mail">
-
-
-						<!-- Choix -->
-						<div><label for="noname">J'ai connu ce site grâce à</label>
-							<select name="noname" id="noname">
+							<!-- Choix j'ai connu ce site grâce à: -->
+							<label for="connu">J'ai connu ce site grâce à</label>
+							<select name="connu" id="connu">
                                   <option value="choice" selected>choisir</option>
                                   <option value="facebook">Facebook</option>
                                   <option value="twitter">Twitter</option>
@@ -66,27 +67,40 @@
                                   <option value="jt">JT de 13h de Jean-Pierre Pernault</option>
                                   <option value="other">Autre</option>
                                 </select>
-						</div>
-					</fieldset>
+						</fieldset>
+					</div>
 
-					<fieldset>
-						<!-- Commentaires -->
+					<!-- Zone commentaire -->
+					<div id="commentary">
+						<fieldset>
+							<p>Pour laisser un commentaire libre à propose d'O'clock, c'est par ici:</p>
+							<textarea name="commentary" required autocomplete="on" placeholder="Votre message" rows="5" cols="50"></textarea>
+						</fieldset>
+					</div>
 
-						<div>
-							<textarea name="commentary" id="commentary" required autocomplete="on" rows="5" cols="10">Pour laisser un commentaire libre à propose d'O'clock, c'est par ici:
-                                </textarea>
-						</div>
-					</fieldset>
+					<!-- Zone Certification des informations -->
+					<div id="checkbox">
+						<fieldset>
+							<label>
+                          <input type="checkbox"> Je certifie la véracité de ces informations.
+                        </label>
+						</fieldset>
+					</div>
 
-					<fieldset>
-						<!-- checkbox -->
-						<div>
-							<input type="checkbox" name="accord" id="accord" /><label for="accord"> Je certifie la véracité de ces informations.</label>
-						</div>
-					</fieldset>
+					<!-- Zone Ajouter un fichier -->
+					<div id="fichier">
+						<fieldset>
+							<p>Ajouter un fichier:</p>
+							<input type="file">
+						</fieldset>
+					</div>
 
-					<!-- Bouton envoyer -->
-					<input type="submit" value="Envoyer" />
+					<!-- Zone Bouton envoyer -->
+					<div id="envoyer">
+						<fieldset>
+							<input type="submit" value="Envoyer" />
+						</fieldset>
+					</div>
 
 				</form>
 			</section>
