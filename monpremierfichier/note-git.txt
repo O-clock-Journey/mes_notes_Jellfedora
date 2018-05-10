@@ -1,1 +1,0 @@
--git status: permet de connaitre l'état du répertoire de travail et de toutes les modifications apportés
