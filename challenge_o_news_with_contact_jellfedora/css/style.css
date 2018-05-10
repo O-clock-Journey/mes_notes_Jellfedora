@@ -1,0 +1,164 @@
+/* MISE EN PAGE PRINCIPALE */
+
+#welcome {
+  /* limiter à 1/2 du parent */
+  width: 50%;
+  /* fixer la hauteur : 100% de la fenêtre ? */
+
+  /* - 100% : taille du parent
+  (marche pas pour la hauteur comme pour la largeur) */
+  /* height: 100%; */
+
+  /* - hauteur en px :
+  (c'est pas très adaptable, puisqu'on ne connait pas la hauteur en px de la fenêtre de tous les visiteurs) */
+
+  /* - "toute la hauteur de la fenêtre" => l'unité vh signifie viewport height : hauteur de la fenêtre où est consultée le site
+   */
+  height: 100vh;
+
+  /* image de fond */
+  background-image: url('../images/student.jpg');
+  background-size: cover;
+
+  /* ajouter float ou position à un élément le fait sortir du flux */
+  /* position: fixed ==>  */
+  position: fixed;
+}
+
+#content {
+  /* limiter à 1/2 du parent */
+  width: 50%;
+  max-height: 100vh;
+
+  /* "décaler" le bloc à droite */
+  margin-left: 50%;
+
+  /* overflow : permet de "décider" de ce qu'on fait avec le contenu qui dépasse de la fenêtre  */
+  overflow-y: auto;
+}
+
+
+/* MISE EN PAGE #welcome */
+#welcome {
+  display: flex;
+  /* répartition verticale des élements */
+  flex-direction: column;
+  /* répartition sur tout l'axe, premier élement "collé" au début, et dernier à la fin */
+  justify-content: space-between;
+
+
+  padding: 3em 2em 1em;
+}
+#welcome,
+#welcome a {
+  color: #fff;
+}
+
+
+#logo {
+  background: url(../images/onews.svg) no-repeat;
+  background-size: 35px;
+  background-position: 0 4px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100px;
+  padding-left: 50px;
+  font-size: 1.8em;
+  line-height: 1em;
+}
+
+#welcome-message {
+  text-align: right;
+
+  /* Ce bloc "dépasse" trop à gauche
+  on veut qu'il prenne au maximum 75% de la largeur, ferré à droite */
+  /* solution 1 */
+  /* padding-left: 25%; */
+
+  /* solution 2:
+  on applique une largeur explicite à l'élément, puis on prend soin de lui indiquer de s'aligner différemment sur l'axe secondaire (horizontal)
+  */
+  width: 75%;
+  align-self: flex-end;
+}
+#welcome-message h1 span {
+  font-size: 0.5em;
+  font-weight: 400;
+  font-style: italic;
+}
+#menu {
+  text-align: right;
+}
+#menu a {
+  margin-left: 2em;
+}
+
+
+
+/* mise en page + style #content */
+
+#content-header {
+  border-bottom: 1px solid #eaeaea;
+  padding: 1em 2em;
+  background-color: #f9f9f9;
+}
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post {
+  width: 50%;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  padding: 2em;
+}
+
+.meta {
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+.meta-icon {
+  width: 2em;
+  margin-right: 10px;
+}
+
+.meta-date {
+  color: #999;
+}
+.post-title {
+  margin: 1em 0;
+}
+
+.post .post-read {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.post.work .badge{
+  background-color: #0766F0;
+}
+
+.post.news .badge{
+  background-color: #98DC62;
+}
+.post.team .badge{
+  background-color: #DC5E53;
+}
+
+.badge:hover{
+  color: #999;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #999;
+}
+.badge {
+  text-transform: uppercase;
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+  background-color: #999;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em
+}
