@@ -33,38 +33,32 @@
 			<header id="content-header">
 				<h1>Contact</h1>
 			</header>
+
 			<section>
-				<div id="button_mme_mr">
-					<form action="/ma-page-de-traitement" method="post">
-						<form action="" method="post">
 
-							<!-- Choix Mme/Mr -->
-							<fieldset>
-								<input type="radio" name="radio" id="button_mme"> <label for="radio">Mme /</label>
-								<input type="radio" name="radio" id="button_mr"> <label for="radio">Mr</label>
-							</fieldset>
+				<form action="traitement.php" method="POST">
 
-							<!-- Prenom -->
-							<div>
-								<textarea name="user_first_name" id="user_first_name" required autocomplete="on" rows="1 " cols="10">Prenom
-                                </textarea>
-							</div>
 
-							<!-- Nom -->
-							<div>
-								<textarea name="user_last_name" id="user_last_name" required autocomplete="on" rows="1 " cols="10">Nom
-                                </textarea>
-							</div>
+					<fieldset>
 
-							<!-- E-mail -->
-							<div>
-								<textarea name="email" id="user_email" required autocomplete="on" rows="1 " cols="10">Adresse e-mail
-                                </textarea>
-							</div>
+						<!-- Choix Mme/Mr -->
+						<input type="radio" name="case" id="button_mme"> <label for="radio">Mme /</label>
+						<input type="radio" name="case" id="button_mr"> <label for="radio">Mr</label>
 
-							<!-- Choix -->
-							<div><label for="noname">J'ai connu ce site grâce à</label>
-								<select name="noname" id="noname">
+						<!-- Prenom -->
+						<input type="text" placeholder="Prenom">
+
+						<!-- Nom -->
+						<input type="text" placeholder="Nom">
+
+						<!-- E-mail -->
+						<input type="email" placeholder="Adresse e-mail">
+
+
+						<!-- Choix -->
+						<div><label for="noname">J'ai connu ce site grâce à</label>
+							<select name="noname" id="noname">
+                                  <option value="choice" selected>choisir</option>
                                   <option value="facebook">Facebook</option>
                                   <option value="twitter">Twitter</option>
                                   <option value="google">Google</option>
@@ -72,35 +66,32 @@
                                   <option value="jt">JT de 13h de Jean-Pierre Pernault</option>
                                   <option value="other">Autre</option>
                                 </select>
-							</div>
+						</div>
+					</fieldset>
 
+					<fieldset>
+						<!-- Commentaires -->
 
-
-							<div>
-								<label for="name">Nom</label>
-								<input type="text" id="name" name="user_name">
-							</div>
-
-							<div>
-								<label for="mail">Adresse e-mail</label>
-								<input type="email" id="mail" name="user_mail">
-							</div>
-
-							<!-- Commentaires -->
-							<div>
-								<textarea name="commentary" id="commentary" required autocomplete="on" rows="5" cols="10">Pour laisser un commentaire libre à propose d'O'clock, c'est par ici:
+						<div>
+							<textarea name="commentary" id="commentary" required autocomplete="on" rows="5" cols="10">Pour laisser un commentaire libre à propose d'O'clock, c'est par ici:
                                 </textarea>
-							</div>
+						</div>
+					</fieldset>
 
-							<!-- checkbox -->
-							<div>
-								<input type="checkbox" name="accord" id="accord" /><label for="accord"> Je certifie la véracité de ces informations.</label>
-							</div>
-						</form>
-					</form>
+					<fieldset>
+						<!-- checkbox -->
+						<div>
+							<input type="checkbox" name="accord" id="accord" /><label for="accord"> Je certifie la véracité de ces informations.</label>
+						</div>
+					</fieldset>
+
+					<!-- Bouton envoyer -->
+					<input type="submit" value="Envoyer" />
+
+				</form>
 			</section>
-			</div>
 		</div>
+	</div>
 </body>
 
 </html>
