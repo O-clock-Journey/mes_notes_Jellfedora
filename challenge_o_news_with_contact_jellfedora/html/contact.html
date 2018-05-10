@@ -35,7 +35,6 @@
 			</header>
 
 			<section>
-
 				<!-- Formulaire -->
 				<form action="traitement.php" method="POST">
 
@@ -43,22 +42,30 @@
 					<div id="renseignement">
 						<fieldset>
 
-							<!-- Choix Mme/Mr -->
-							<input type="radio" name="statut" id="button_mme"> <label for="radio">Mme</label> /
-							<input type="radio" name="statut" id="button_mr"> <label for="radio">Mr</label>
+							<div id="lign1">
+								<!-- Choix Mme/Mr -->
+								<div>
+									<input type="radio" name="statut"> <label for="radio"></label> Mme /
+									<input type="radio" name="statut"> <label for="radio"></label>Mr
+								</div>
 
-							<!-- Prenom -->
-							<input type="text" placeholder="Prenom">
+								<!-- Prenom -->
+								<input type="text" id="prenom" placeholder="Prenom">
 
-							<!-- Nom -->
-							<input type="text" placeholder="Nom">
+								<!-- Nom -->
+
+								<input type="text" id="nom" placeholder="Nom">
+
+							</div>
 
 							<!-- E-mail -->
-							<input type="email" placeholder="Adresse e-mail">
+
+							<input id="email" type="email" placeholder="Adresse e-mail">
 
 							<!-- Choix j'ai connu ce site grâce à: -->
-							<label for="connu">J'ai connu ce site grâce à</label>
-							<select name="connu" id="connu">
+							<div id="ctrrrrr">
+								<label for="connu">J'ai connu ce site grâce à</label>
+								<select id="connu" name="connu">
                                   <option value="choice" selected>choisir</option>
                                   <option value="facebook">Facebook</option>
                                   <option value="twitter">Twitter</option>
@@ -67,6 +74,7 @@
                                   <option value="jt">JT de 13h de Jean-Pierre Pernault</option>
                                   <option value="other">Autre</option>
                                 </select>
+							</div>
 						</fieldset>
 					</div>
 
@@ -74,7 +82,7 @@
 					<div id="commentary">
 						<fieldset>
 							<p>Pour laisser un commentaire libre à propose d'O'clock, c'est par ici:</p>
-							<textarea name="commentary" required autocomplete="on" placeholder="Votre message" rows="5" cols="50"></textarea>
+							<textarea name="commentary" id="commentary_space" placeholder="Votre message" rows="5" cols="50"></textarea>
 						</fieldset>
 					</div>
 

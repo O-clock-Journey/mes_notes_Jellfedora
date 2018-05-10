@@ -54,18 +54,21 @@
   margin-left: 2em;
 }
 
+/*Page de droite*/
 #content {
   margin-left: 50%;
   overflow-y: auto;
   width: 50%;
 }
+
+/*Header page de droite*/
 #content-header {
   border-bottom: 1px solid #eaeaea;
   padding: 1em 2em;
   background-color: #f9f9f9;
 }
 
-
+/*Formulaire*/
 section {
   border: 1px solid #eaeaea;
   margin: 40px;
@@ -78,21 +81,72 @@ section {
 }
 
 #renseignement{
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+  width: auto;
+}
 
-  color: blue;
+#lign1{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
 
+#prenom{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid  cyan;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 40%;
+}
 
-#user_first_name textarea{
-  width: 50px;
+#nom{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid  cyan;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 40%;
 
+}
 
+#email{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid  cyan;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 10px;
+  width:100%;
+}
+
+#connu{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid  cyan;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 10px;
+  width: 50%;
 }
 
 #commentary{
-  width: 60%;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#commentary_space{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid  cyan;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
 }
 
 
