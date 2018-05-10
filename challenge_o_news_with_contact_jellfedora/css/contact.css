@@ -67,8 +67,12 @@
 
 #user_first_name textarea{
   width: 50px;
-  
 
+
+}
+
+#commentary{
+  width: 50%;
 }
 
 
