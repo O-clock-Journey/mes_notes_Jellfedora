@@ -9,11 +9,13 @@
   position: fixed;
   padding: 3em 2em 1em;
 }
+
 #home-page #welcome {
   background: url('../images/face.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 #logo {
   background: url(../images/onews.svg) no-repeat;
   background-size: 35px;
